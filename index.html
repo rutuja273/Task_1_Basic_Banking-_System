@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Banking System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="x.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", monospace;}
+        body, html {
+          height: 100%;
+          color: #050505;
+          line-height: 1.8;
+        }
+        
+        .bgimg-1, .bgimg-2 {
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        
+        /* First image */
+        .bgimg-1 {
+          background-image: url('/img/bg1.png');
+          min-height: 100%;
+        }
+        
+        /* Second image */
+        .bgimg-2 {
+          background-image: url("/img/bg2.png");
+          min-height: 400px;
+        }
+        
+        .x-wide {letter-spacing: 10px;}
+        .x-hover-opacity {cursor: pointer;}
+        
+        @media only screen and (max-device-width: 1600px) {
+          .bgimg-1, .bgimg-2 {
+            background-attachment: scroll;
+            min-height: 400px;
+          }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="x-top">
+        <div class="x-bar" id="myNavbar">
+            <a class="x-bar-item x-button x-hover-black x-hide-medium x-hide-large x-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="x-bar-item x-button"> HOME</a>
+            <a href="transfer.html" class="x-bar-item x-button x-hide-small"> CUSTOMERS</a>
+            <a href="#contact" class="x-bar-item x-button x-hide-small"> CONTACT US</a>
+            <a href="#" class="x-bar-item x-button x-hide-small x-right x-hover-red">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="bgimg-1 x-display-container x-opacity-min" id="home">
+        <div class="x-display-middle" style="white-space:nowrap;">
+            <a class="x-padding-24 x-black x-xxxlarge ">
+                <span class="x-center x-padding-large x-sand x-xlarge x-animate-opacity x-wide"> Basic <span
+                        class="x-hide-small">Banking</span> System</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="x-center">
+        <a href="transfer.html" class="x-button x-padding-16 x-xxlarge x-green x-text-white"
+            style="margin-top:64px">Make Transaction</a>
+    </div>
+    <div class="x-center">
+        <a href="transfer.html" class="x-button x-padding x-large x-blue x-text-white"
+            style="margin-top:64px">View Customers</a>
+        <a href="transfer.html" class="x-button x-padding x-large x-blue x-text-white"
+            style="margin-top:64px">Transaction History</a>
+    </div>
+
+    <div class="bgimg-2 x-display-container x-opacity-min">
+        <div class="x-display-middle">
+            <span class="x-xxlarge x-text-black x-wide">CONTACT US</span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="x-content x-container" id="contact">
+        <h3 class="x-center"></h3>
+        <div class="x-row x-section">
+            <div class="x-col m4 x-container">
+                <img src="/img/map.jpeg" class="x-image x-round" style="width:100%">
+            </div>
+            <div class="x-col m8 x-panel">
+                <div class="x-large x-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw x-hover-text-black x-xlarge x-margin-right"></i>Mumbai,
+                    India<br>
+                    <i class="fa fa-phone fa-fw x-hover-text-black x-xlarge x-margin-right"></i> Phone: +22
+                    12341234<br>
+                    <i class="fa fa-envelope fa-fw x-hover-text-black x-xlarge x-margin-right"></i> Email:
+                    abc@xyz.com<br>
+                </div>
+                <form action="/action_page.php" target="_blank">
+                    <div class="x-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="x-half">
+                            <input class="x-input x-border" type="text" placeholder="Name" required
+                                name="Name">
+                        </div>
+                        <div class="x-half">
+                            <input class="x-input x-border" type="text" placeholder="Email" required
+                                name="Email">
+                        </div>
+                    </div>
+                    <input class="x-input x-border" type="text" placeholder="Message" required name="Message">
+                    <button class="x-button x-black x-right x-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="x-center x-blue x-padding-64 x-opacity x-hover-opacity-off">
+        <a href="#home" class="x-button x-blue"><i class="fa fa-arrow-up x-margin-right"></i>To the top</a>
+        <div class="x-xlarge x-section">
+            <i href="" class="fa fa-youtube x-hover-opacity"></i>
+            <i href="" class="fa fa-github x-hover-opacity"></i>
+            <i href="https://linkedin.com/in/rutuja-babar" class="fa fa-linkedin x-hover-opacity"></i>
+        </div>
+    </footer>
+
+    <script>
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
+        }
+        
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "x-bar" + " x-card" + " x-animate-top" + " x-white";
+            } else {
+                navbar.className = navbar.className.replace(" x-card x-animate-top x-white", "");
+            }
+        }
+        
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("x-show") == -1) {
+                x.className += " x-show";
+            } else {
+                x.className = x.className.replace(" x-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
