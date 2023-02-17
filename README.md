@@ -23,6 +23,6 @@ YouTube: https://lnkd.in/guwJyanX
 
 GitHub: https://lnkd.in/grPCcDP9
 
-LinkedIn: linkedin.com/in/rutuja-babar
+LinkedIn: https://linkedin.com/in/rutuja-babar
 
 To know more about The Sparks Foundation: https://lnkd.in/d8sia2qh
